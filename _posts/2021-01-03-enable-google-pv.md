@@ -2,8 +2,7 @@
 title: Enable Google Page Views
 author: sille_bille
 date: 2021-01-03 18:32:00 -0500
-categories: [Blogging, Tutorial]
-tags: [google analytics, pageviews]
+categories: [Blogging]
 ---
 
 > The content of this post applies only to [_Universal Analytics property_](https://support.google.com/analytics/answer/10220206) (UA), not [_Google Analytics 4_](https://support.google.com/analytics/answer/10089681) (GA 4). In addition, since [UA is about to be deprecated on Jul 1, 2023](https://support.google.com/analytics/answer/11583528), the Page Views feature of [_Chirpy_][chirpy-homepage] will also be deprecated at that time.
@@ -89,17 +88,17 @@ There is a detailed [tutorial](https://developers.google.com/analytics/solutions
 
     ```console
     [root@bc96abf71ef8 /]# gcloud init
-
+    
     ~snip~
-
+    
     Go to the following link in your browser:
-
+    
         https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=XYZ.apps.googleusercontent.com&redirect_uri=ABCDEFG
-
+    
     Enter verification code: <VERIFICATION CODE THAT YOU GET AFTER YOU VISIT AND AUTHENTICATE FROM THE ABOVE LINK>
-
+    
     You are logged in as: [blah_blah@gmail.com].
-
+    
     Pick cloud project to use:
     [1] chirpy-test-300716
     [2] Create a new project
@@ -155,7 +154,7 @@ There is a detailed [tutorial](https://developers.google.com/analytics/solutions
     ```console
     [root@bc96abf71ef8 src]# gcloud app deploy
     Services to deploy:
-
+    
     descriptor:      [/tmp/google-analytics-super-proxy/src/app.yaml]
     source:          [/tmp/google-analytics-super-proxy/src]
     target project:  [chirpy-test-XXXX]
@@ -165,7 +164,7 @@ There is a detailed [tutorial](https://developers.google.com/analytics/solutions
 
 
     Do you want to continue (Y/n)? Y
-
+    
     Beginning deployment of service [default]...
     ╔════════════════════════════════════════════════════════════╗
     ╠═ Uploading 1 file to Google Cloud Storage                 ═╣
@@ -174,10 +173,10 @@ There is a detailed [tutorial](https://developers.google.com/analytics/solutions
     Updating service [default]...done.
     Setting traffic split for service [default]...done.
     Deployed service [default] to [https://chirpy-test-XXXX.ue.r.appspot.com]
-
+    
     You can stream logs from the command line by running:
     $ gcloud app logs tail -s default
-
+    
     To view your application in the web browser run:
     $ gcloud app browse
     ```
