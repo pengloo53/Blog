@@ -9,7 +9,14 @@ pin: true
 
 在学习 Docker 之前，其实也尝试过直接在 Windows 下部署 Ruby 环境，但总是因为一些原因而失败，Ruby 似乎对 Windows 非常不友好，后来索性不折腾了，学点 Docker 吧。
 
-这篇文章是从零开始，先了解，然后安装，最后走一遍大概的使用流程。
+本文分为以下 6 个部分：
+
+- 开始：简单了解，大致走一遍使用流程
+- 常用命令：汇总记录一些常用的命令，便于查阅
+- 制作镜像：进一步了解 `Dockerfile` 文件
+- 搭建服务：完成 `Jekyll` 本地预览服务的搭建
+- Compose：联合 `Nginx` 服务，初步了解 Docker Compose
+- 结尾：发布镜像，正式环境验证
 
 <!-- more -->
 
@@ -43,18 +50,14 @@ yum remove docker \
 
 #### 2. 安装docker 基础包
 
-```
-yum install -y yum-utils \
-  device-mapper-persistent-data \
-  lvm2
+```bash
+yum install -y yum-utils device-mapper-persistent-data lvm2
 ```
 
 #### 3. 设置稳定仓库
 
-```
-yum-config-manager \
-    --add-repo \
-    https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+```bash
+yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 ```
 
 #### 4. 安装Docker Engine - Community
@@ -109,7 +112,7 @@ docker run --rm -p 8000:80 nginx:latest
 
 制作镜像需要一个叫 `Dockerfile` 的配置文件，一个纯文本文件，用来生成 image，Docker 根据该文件生成二进制的 image。
 
-找一个目录，创建 Dockerfile 文件，里面编写如下几行代码：
+找一个目录，创建 `Dockerfile` 文件，里面编写如下几行代码：
 
 ```bash
 FROM nginx
@@ -277,7 +280,7 @@ docker run --rm -p 8000:3000 -it koa-demo /bin/bash
 
 ## 制作镜像
 
-这篇文章，将通过实操进一步了解制作镜像的一些知识点。
+下面将通过实操，进一步了解制作镜像的一些知识点。
 
 <!-- more -->
 
@@ -388,9 +391,9 @@ docker run --rm -v /C/Users/Administrator/Git/docker-jekyll/site:/site docker-je
 
 ## 搭建服务
 
-上篇文章了解了镜像怎么来的，怎么制作，以及怎么用。通过镜像里的 Jekyll 服务，在本地生成了一个 Jekyll 博客模板，接下来要解决的问题是，博客倒是生成了，那怎么跑起来呢？
+通过上面的介绍，已经大致了解，镜像怎么来的、怎么制作以及如何使用，并且，通过镜像里的 Jekyll 服务，在本地生成了一个 Jekyll 博客模板。
 
-<!-- more -->
+博客倒是生成了，怎么把博客服务运行起来，并且能够在主机访问到呢？接下来便要完成这件事情。
 
 首先，我们需要了解的是，Jekyll 博客要在本地跑起来（也就是开启服务模式），需要用到一个命令：`jekyll serve`，并且还得知道，运行这个命令的时候，会在本地安装一些依赖包。
 
@@ -508,11 +511,9 @@ ENTRYPOINT [ "docker-entrypoint.sh" ]
 
 ## Docker Compose
 
-通过前面几篇笔记，基本达成最初学习 Docker 的目的：在本地（Windows）搭建 Jekyll 的环境，预览博客。
+通过前面的介绍，基本完成了：在本地（Windows）搭建 Jekyll 的环境，预览博客。现在还差最后一步，如何在生产环境中部署博客？
 
-还差最后一步，如何在生产环境中部署博客？通过 `jekyll serve` 自带的服务，肯定是不行的，性能和稳定性都不足以支撑在正式环境中运行。针对这样的静态博客，正式环境中，通常的方案是使用 Nginx 服务做反向代理。
-
-<!-- more -->
+通过 `jekyll serve` 自带的服务，肯定是不行的，性能和稳定性都不足以支撑在正式环境中运行。针对这样的静态博客，正式环境中，通常的方案是使用 `Nginx` 服务做反向代理。
 
 ### Nginx 服务
 
@@ -548,6 +549,19 @@ docker run -d -p 8080:80 -v /C/Users/Administrator/Git/docker-jekyll/_site:/usr/
 针对这样多个容器协同作用的场景，Docker 有更方便的手段，那便是 Docker Compose，Docker Compose 需要单独安装，不过针对 Windows 环境来说，随着图形界面的安装，已经一并安装了。
 
 ![](/image/docker/image-20221008162557883.png)
+
+Linux 上安装命令如下：
+
+```bash
+# 下载 docker-compose，下载地址需要自行确认
+curl -L https://github.com/docker/compose/releases/download/v2.11.2/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+# 授权
+chmod +x /usr/local/bin/docker-compose
+# 查看版本号，这里是 2.11.2
+docker-compose -v
+```
+
+
 
 既然都通过 nginx 反向代理静态博客了，那么 Jekyll serve 的本地服务其实就不用再启动了。可以重新制作一个 Jekyll 镜像，修改 Dockerfile 代码如下：
 
@@ -618,19 +632,19 @@ services:
 
 该联合服务的作用是，jekyll 容器监控博客内容，发现变动便自动更新 _site，而 nginx 服务反向代理静态站点，提供 Web 服务。
 
-## 收尾
+## 结尾
 
-这篇文章简单收个尾，入门学习就到这里了。
+最后简单收个尾，将项目代码上传到 `Github`，将镜像发布到 `Docker Hub`，最后在正式环境中，验证一下学习成果。
 
 ### 项目地址
 
-自己用来学习测试用的，仅做参考：[Github：pengloo53/docker-jekyll](https://github.com/pengloo53/docker-jekyll)
+供学习测试使用：[Github：pengloo53/docker-jekyll](https://github.com/pengloo53/docker-jekyll)
 
 ### 发布镜像
 
 三条命令
 
-```bash
+```shell
 # 登录
 docker login
 # 标记
@@ -645,4 +659,70 @@ docker image push pengloo53/docker-jekyll:0.0.3
 
 Docker Hub 的项目地址：[pengloo53/docker-jekyll](https://hub.docker.com/r/pengloo53/docker-jekyll/tags)
 
-具体的使用方法，笔记中已经说明，不再阐述。
+具体的使用方法，上面已经详细阐述，不再说明。
+
+### 线上部署
+
+首先你得有一个云主机，并且能够登录进去，主机里已经安装了 Git、Docker 等软件。
+
+我这里系统是 CentOS 8.2 ，阿里云的主机（一定要记得设置阿里云的安全规则）。
+
+```shell
+[root@xxx ~]# cat /etc/redhat-release
+CentOS Linux release 8.2.2004 (Core)
+```
+
+安装 Docker，命令如下（上面已经有了，这里再写一遍）：
+
+```shell
+# 安装基础依赖
+yum install -y yum-utils device-mapper-persistent-data lvm2
+# 切换国内镜像
+yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+# 安装主程序
+yum install docker-ce docker-ce-cli containerd.io
+# 启动服务
+sudo systemctl start docker
+```
+
+安装 docke-compose，命令如下：
+
+```shell
+# 下载 docker-compose，下载地址需要自行确认
+curl -L https://github.com/docker/compose/releases/download/v2.11.2/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+# 授权
+chmod +x /usr/local/bin/docker-compose
+# 查看版本号，这里是 2.11.2
+docker-compose -v
+```
+
+将 [pengloo53/docker-jekyll](https://github.com/pengloo53/docker-jekyll) 项目下载下来，命令如下：
+
+```shell
+git clone https://github.com/pengloo53/docker-jekyll
+```
+
+修改项目里的 `docker-compose.yml` 文件代码（主要是修改了 `version` 的值和 `nginx` 映射的端口号）：
+
+```yaml
+version: '2.11.2'
+services:
+  jekyll:
+    image: pengloo53/docker-jekyll:0.0.3
+    volumes:
+      - ./site:/site
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./site/_site:/usr/share/nginx/html
+```
+
+回到项目目录，启动服务，命令如下：
+
+```shell
+docker-compose -p blog up
+```
+
+访问公网 IP 即可，到此结束。

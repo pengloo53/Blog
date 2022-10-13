@@ -25,9 +25,9 @@ order: 5
 
 ### 关注我
 
-- 微信公众号：[i90byte](http://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198549&idx=1&sn=632d4d005ec3efa9b7400bbca5a2a60c&chksm=be57355c8920bc4af1487ee4c648e97ed191838927215b4f7aa833654c1644e82441406563ec#rd)，想写啥就发点啥
-- 即刻：lupeng，日常叨叨
-- Ins：lupeng，记录生活
+- 微信公众号：[i90byte](http://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198549&idx=1&sn=632d4d005ec3efa9b7400bbca5a2a60c&chksm=be57355c8920bc4af1487ee4c648e97ed191838927215b4f7aa833654c1644e82441406563ec#rd)，产品工作日常
+- 即刻：[lupeng]()，日常叨叨
+- ins：[lupeng](https://www.instagram.com/pengloo53/)，记录生活
 
 ### 支持我
 
@@ -35,6 +35,6 @@ order: 5
 
 ### 联系我
 
-- 邮箱：lupeng@90byte.com，
-- 微信：reallupeng，加好友，请务必备注出处，否则看心情通过了。另外，天性慢热，闲聊请自备话题
+- 邮箱：lupeng@90byte.com
+- 微信：reallupeng，请务必备注出处。另外，天性慢热，闲聊请自备话题
 
