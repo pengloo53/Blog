@@ -3,9 +3,13 @@
 -
   type: github
   icon: 'fab fa-github'
+# -
+  # type: twitter
+  # icon: 'fab fa-twitter'
 -
-  type: twitter
-  icon: 'fab fa-twitter'
+  type: weixin
+  icon: 'fab fa-weixin'
+  url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MjM5MDQ4NjUwMg==&action=getalbum&album_id=2027947903146590214#wechat_redirect
 -
   type: email
   icon: 'fas fa-envelope'
