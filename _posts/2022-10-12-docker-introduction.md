@@ -1,7 +1,7 @@
 ---
 title: Docker Introduction
 date: 2022-10-12
-tags: docker
+tags: [docker,jekyll,nginx]
 pin: true
 ---
 
