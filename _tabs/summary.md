@@ -49,7 +49,7 @@ order: 3
 
 #### [Kindle2flomo](http://kindle2flomo.90byte.com/index.html)
 
-![](/assets/img/images/product/kindle2flomo.png)
+![](/image/product/kindle2flomo.png)
 
 这是一个小工具，结合 [flomo](https://flomoapp.com/) 的笔记服务，实现将 Kindle 读书笔记一键导入到 flomo 中，产品的形态已经经过两个版本的迭代，但我仍然觉得这不是最终形态，即便是一个简单的工具产品，也应该具备更好的产品体验，帮助到更多的人，实现它的价值。
 
@@ -65,7 +65,7 @@ order: 3
 
 #### [MD2Wechat](http://md2wechat.90byte.com/index.html)
 
-![](/assets/img/images/product/md2wechat.png)
+![](/image/product/md2wechat.png)
 
 这是一款针对微信公众号发文的 Markdown 在线编辑器。
 
