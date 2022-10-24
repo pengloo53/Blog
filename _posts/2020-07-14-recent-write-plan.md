@@ -66,11 +66,7 @@ tags: [写作]
 
 ![](/image/about_write/image-20200714140204393.png)
 
-微信公众号新增的专辑功能，正好方便对这类内容的组织，点击下图，查看专辑。
-
-https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337905242612269057&__biz=MjM5MDQ4NjUwMg==#wechat_redirect
-
-备份链接：[标签: 产品技术之旅 | 鲁鹏 · BLOG](https://iamlupeng.com/tag/%E4%BA%A7%E5%93%81%E6%8A%80%E6%9C%AF%E4%B9%8B%E6%97%85)
+微信公众号新增的专辑功能，正好方便对这类内容的组织，[点击查看专辑](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337905242612269057&__biz=MjM5MDQ4NjUwMg==#wechat_redirect)，博客备份链接：[标签: 产品技术之旅](/tags/%E4%BA%A7%E5%93%81%E6%8A%80%E6%9C%AF%E4%B9%8B%E6%97%85)
 
 ### 再挖新坑
 

@@ -35,25 +35,29 @@ order: 3
 
 
 
-## 产品技术
-
-### 产品
+## 产品实践
 
 这里记录我做过的一些小玩意。
 
-#### 字节工厂
+### 字节工厂
 
+![](/image/product/bytefactory.jpg)
 
+这是一个微信小程序，搜索【字节加工厂】，便可找到。
 
-这是一个微信小程序，
+它是一个小工具合集，2019 年在家待业那几个月鼓捣的，看了几本小程序开发的书籍，学习过程中，并尝试做了这个小程序，自我感觉还不错，从想法、到设计、到研发、到上线，过程还是挺享受的。只是现实是残酷了，所有时间铺在这么个毫无收益的事情上面，注定是无法持久的。
 
-#### [Kindle2flomo](http://kindle2flomo.90byte.com/index.html)
+一边学习，一边写代码，一边总结，那几个月的时光至少还是很充实的。最后输出了一个[入门教程](/2019/10/07/publish-a-course.html)，作为它最后的收场。
+
+另外，还有一些过程中的零散思考，[点击查看](/tags/小程序/)。
+
+### Kindle2flomo
+
+访问地址：[http://kindle2flomo.90byte.com/index.html](http://kindle2flomo.90byte.com/index.html)
 
 ![](/image/product/kindle2flomo.png)
 
-这是一个小工具，结合 [flomo](https://flomoapp.com/) 的笔记服务，实现将 Kindle 读书笔记一键导入到 flomo 中，产品的形态已经经过两个版本的迭代，但我仍然觉得这不是最终形态，即便是一个简单的工具产品，也应该具备更好的产品体验，帮助到更多的人，实现它的价值。
-
-做这个小工具的一些记录：
+这是一个将 Kindle 读书笔记一键导入到 [flomo](https://flomoapp.com/) 中的小工具。下面是做这个小工具的一些记录：
 
 - [详谈 Kindle 读书笔记的导出](http://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198191&idx=1&sn=95c506dde4a079d2840a91b12ca358a8&chksm=be5734e68920bdf04af5ad5f31d8c40acea17e723b1b0eeaa2d3d47d009a0adc5abca44bc953#rd)
 - [Kindle 笔记一键导入 Flomo](http://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198220&idx=1&sn=5d0fecf4d3a4ab1469724292dad9797d&chksm=be5734058920bd13ac17f149d7a54dd01b17a066d70f55a813ebb338075b6837f6c6605b255b#rd)
@@ -63,7 +67,10 @@ order: 3
 
 随着 Kindle 中国的关闭，这个工具大概率不会更新了。但可能会出现新的工具：基于它的读书笔记产品。
 
-#### [MD2Wechat](http://md2wechat.90byte.com/index.html)
+### MD2Wechat
+
+> 已经停止服务，推荐使用：[Markdown Nice](https://editor.mdnice.com/)。
+{: .prompt-warning}
 
 ![](/image/product/md2wechat.png)
 
@@ -71,18 +78,20 @@ order: 3
 
 很早之前根据一个开源项目改的，前段时间因为某些原因又拿出来完善了一下，顺便加了图床的功能，为了满足自己发公众号的需求。
 
-后续可能还会有迭代。
-
 关于它的几篇记录：
 
 - [为了用 Markdown 写微信公众号，自定义了一个编辑器](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649197117&idx=1&sn=90616fd84e3a34bb9dc98dbbf27ee565&chksm=be5730b48920b9a25d4ddf9f2dd87bbcc61045d7bd160b4c7da0ae2c474d7cc91ca98732c340&token=2051922549&lang=zh_CN#rd)
 
 - [微信公众号 Markdown 编辑器，可能是最接近原生的体验](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198509&idx=1&sn=dc73a7bce4836d6648d7a4f8c8f0ff49&chksm=be5735248920bc322774cd6bce06bcc8553aa67c0b4745a40170762eed3704e0e1603f61bb14&token=1584174037&lang=zh_CN#rd)
 
+## 技术笔记
+最初决定离开职场，原本是打算开始写教程的，结果还是草率了。这个领域需要付出的努力，远非我所能想象。
 
-### 技术
+尝试写过几份教程，没有一个完成，不管哪方面的原因，至少证明自己不是这块料。
 
+是时候祭出这篇文章了：[一坑未平，多坑再起](/2020/07/14/recent-write-plan.html)。
 
+当然了，文中提到的那些坑都是没有填完的。
 
 ## 日志总结
 

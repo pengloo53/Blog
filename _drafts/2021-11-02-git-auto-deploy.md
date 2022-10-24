@@ -4,40 +4,99 @@ date: 2021-11-04
 tags: [博客,技术]
 ---
 
+这篇关于 Git 的笔记，拖更了快一年了，还是去年折腾博客的时候，在学习的过程中记录下来的。学习的目的是为了解决快速更新博客的问题，这次继续一鼓作气，再填一坑。
+
 <!-- more -->
 
+博客使用的是 Jekyll 搭建的，经过[这次的折腾](/2022/10/20/blog.html)，将服务从 GitHub 转移到了自己的服务器上，与之前相比，在更新博客的时候，有个体验上的差异：通过 GitHub Pages，只需要将本地博客 push 到 GitHub 上，GitHub 就帮助完成了博客的自动部署，而使用自己的服务并没有自动部署的这个功能，虽然通过 nginx 做了一层反向代理，但也只是解决了访问稳定性的问题，并没有解决自动部署的问题。每次在本地更新了博客之后，先要 push 到 GitHub 上（起到类似云盘的功能），然后再到服务器上，pull 一下博客内容才可以。
 
+这篇文章便是要解决这多一步 pull 操作的问题，方案很简单，主要有两步操作：
 
-### Git 裸库（服务端中心库）
+1. 能够将本地项目 git push 到服务器上，去掉使用 GitHub 做中转，需要一个 Git 服务器；
+2. 服务器在接收到博客更新后，自动完成部署，需要利用 Git 的 hook 机制；
 
-裸仓库一般情况下是作为远端的中心仓库而存在的，它不包含**工作区**，不能在这个目录下执行 Git 命令。其他非裸仓库 可以 push 代码到裸仓库，可以从裸仓库 pull 代码到本地。
+## Git 服务器
 
-#### 创建裸库
+本质上是要实现类似 GitHub 提供的服务，可以将本地的项目通过 git push 到自己的服务器上，那便需要一个 Git 服务器。
+
+难不成要在自己的服务器上搭建一个开源的 GitHub？理论上是可行的，实际上是没有必要的。毕竟也不需要提供什么 Web 服务，也不用提供给别人使用等等。
+
+一个 Git 裸库，便足以了。
+
+### Git 裸库
+
+服务端的中心仓库，裸仓库一般情况下是作为远端的中心仓库而存在的，它不包含**工作区**，不能在这个目录下执行 Git 命令。其他非裸仓库可以 push 代码到裸仓库，可以从裸仓库 pull 代码到本地。
+
+**1. 创建裸库**
 
 生成一个裸仓库。
 
-```
+```bash
 cd /home/repo
 git init --bare xxx.git
 ```
 
 以上命令会在 `/home/repo` 目录下生成 `xxx.git` 的目录，即为裸仓库。
 
-####  切换裸库的分支
+**2. 切换裸库的分支**
 
 在裸库中执行 `git checkout <branch-name>` 会报错如下：
 
-```
+```bash
 fatal: this operation must be run in a work tree
 ```
 
 因为裸库是不存在工作区的，可使用命令 `git symbolic-ref HEAD refs/heads/<branch-name>` 替代。
 
-#### 与其他远程仓库镜像
+**3. 与其他远程仓库镜像**
 
-`git push --mirror http://github.com/pengloo53/xxx`
+````bash
+git push --mirror http://github.com/pengloo53/xxx
+````
 
-### Git 钩子自动化部署
+### 服务器配置
+
+这里快速过一下命令了，原理便不多解释。
+
+```bash
+# 新建 git 用户
+sudo useradd git
+# 进入 git 用户目录
+cd /home/git
+# 创建裸库
+git init --bare blog.git
+# 修改用户目录所属
+chown -R git:git /home/git
+```
+
+### 本地操作
+
+默认已经有了一个本地仓库。
+
+```bash
+# 关联远程仓库，xxx 起个名字，ip_address 服务器 IP 地址
+git remote add xxx git@ip_address:blog.git
+# 提交到远程，自动将当前分支推送到了服务器的中心库
+git push xxx
+```
+
+到这里，方案的第一步：将本地项目推送到服务器就完成了，不需要 GitHub 或其他 Git 服务商作为中转，项目数据完全在自己手中。
+
+接下来，便是自动部署了。
+
+## 自动部署
+
+实现类似于 GitHub Pages 服务的功能，自动部署静态页面，并提供 Web 访问。
+
+Web 服务自然还是用 `nginx`，现在要解决的问题便是 git 服务端仓库，在收到 commit 的时候，自动运行 `jekyll build` 命令，生成静态页面，并放到 `nginx` 的目录下。
+
+### Git 钩子
+
+
+
+
+
+
 
 然后编辑 `xxx.git` 目录下的 `hooks/post-receive`  文件，该文件的作用：在提交代码之后，`git` 用户会自动执行里面的脚本，实现自动化部署。
 
@@ -83,22 +142,6 @@ bundle install
 bundle exec jekyll build -s $TMP_GIT_CLONE -d $PUBLIC_WWW -q
 rm -rf $TMP_GIT_CLONE
 exit
-```
-
-### Git 本地仓库
-
-#### 初始化操作
-
-```bash
-git init #初始化
-git remote add origin root@xxx.xxx.xxx.xxx:/www/repo/xxx.git #关联远程仓库
-```
-
-
-
-```bash
-git remote set-url orgin root@xxx.xxx.xxx.xxx:/www/repo/xxx.git #修改远程仓库地址
-
 ```
 
 
