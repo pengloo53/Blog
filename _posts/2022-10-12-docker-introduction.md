@@ -230,6 +230,9 @@ docker login
 docker image tag [imageName] [username]/[imageName]:[tag]
 # 发布 image 到仓库
 docker image push [username]/[imageName]:[tag]
+
+# 搜索 image，返回内容不全，建议去 hub.docker.com 上搜
+docker search xxx
 ```
 
 注意：发布镜像需要在 [hub.docker.com](https://hub.docker.com/) 上注册账号，另外，尽量使用别人制作的镜像，多从[官方仓库](https://hub.docker.com/)看看。
@@ -261,6 +264,18 @@ docker container exec -it [containerID] /bin/bash
 # 拷贝容器的文件到本地
 docker container cp [containID]:[/path/to/file] .
 ```
+
+### 日志
+
+```bash
+docker logs -ft [containerID]
+
+
+```
+
+
+
+
 
 ### 容器运行 run
 
