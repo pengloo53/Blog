@@ -88,13 +88,39 @@ git push xxx
 
 实现类似于 GitHub Pages 服务的功能，自动部署静态页面，并提供 Web 访问。
 
-Web 服务自然还是用 `nginx`，现在要解决的问题便是 git 服务端仓库，在收到 commit 的时候，自动运行 `jekyll build` 命令，生成静态页面，并放到 `nginx` 的目录下。
+Web 服务自然还是用 `nginx`，现在要解决的问题便是 git 服务端仓库，在收到 commit 的时候，自动运行 `jekyll build` 命令，生成静态页面，并放到 `nginx` 的目录下，这就要用到 Git 的钩子功能。
 
 ### Git 钩子
 
+Git 提供在一些事件的前后事件节点，自动运行脚本的能力，这便是钩子。上面例子中，我们便是要在服务端更新了项目代码之后，自动跑一段脚本，生成页面。
 
+详细了解，建议看一下官方文档，尽量看英文的，中文翻译有缺失。
 
+- [Git - githooks Documentation](https://git-scm.com/docs/githooks)
+- [Git - Git 钩子](https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90)
 
+这里我们要用到的钩子是 `post-update`，该文件在 Git 项目的 hooks 目录下。
+
+### 自动部署
+
+（1）从本地拉取工作目录
+
+```bash
+# 直接从本地路径拉取
+git clone /home/git/blog.git
+
+# 如果之前已经使用了 github 拉取，那么，更改项目远程地址为本地
+git remote set-url origin /home/git/blog.git
+```
+
+（2）编写 `post-update` 钩子
+
+```shell
+#! 
+GIT_REPO=/home/repo/xxx.git
+TMP_GIT_CLONE=/home/git/tmp/blog-site
+PUBLIC_WWW=/home/www/xxx
+```
 
 
 
@@ -131,7 +157,7 @@ exit 0
 #### 部署 Jekyll 服务
 
 ```bash
-#!/bin/bash
+#! /bin/bash
 unset GIT_DIR
 GIT_REPO=/home/repo/xxx.git
 TMP_GIT_CLONE=/home/git/tmp/blog-site
@@ -146,37 +172,46 @@ exit
 
 
 
-
+## 附录：Git 命令
 
 #### 分支查看与创建
 
-`git branch` 查看本地分支
-`git branch -r` 查看远程分支
-`git branch -a` 查看所有分支
-`git branch xxx` 创建分支 xxx
+```bash
+git branch #查看本地分支
+git branch -r #查看远程分支
+git branch -a #查看所有分支
+git branch xxx #创建分支 xxx
 
-`git checkout xxx` 切换到分支 xxx
-`git checkout -b xxx` 创建分支 xxx，并切换到 xxx 上（基于当前 HEAD 指向的分支，创建新分支）
+git checkout xxx #切换到分支 xxx
+git checkout -b xxx #创建分支 xxx，并切换到 xxx 上（基于当前 HEAD 指向的分支，创建新分支）
 
-`git checkout -b new-branch existing-branch`  基于 existing-branch 创建 new-branch，new-branch 和 existing-branch 可以是远程分支，例如：origin/xxx
+git checkout -b new-branch existing-branch  #基于 existing-branch 创建 new-branch，new-branch 和 existing-branch 可以是远程分支，例如：origin/xxx
 
-`git fetch --all` 拉取所有远程分支
+git fetch --all #拉取所有远程分支
+```
 
 #### 分支删除与更改
 
-`git branch -d xxx`
-`git branch -D xxx`
-`git branch -m <new-branch-name>` 将当前分支重命名
-
+```bash
+git branch -d xxx
+git branch -D xxx
+git branch -m <new-branch-name> 将当前分支重命名
+```
 
 #### 删除远程分支
 
-`git push origin --delete branch_name` 
-`git push origin :branch_name`
+```bash
+git push origin --delete branch_name
+git push origin :branch_name
+```
 
 
 
-### 注意事项
+
+
+
+
+## 注意事项
 
 1. git repo 建议创建单独的 git 用户来操作，repo 的用户权限改为 git
 2. 本地仓库想要顺利（无需输入密码） push 到服务端的 git 仓库，建议[配置 ssh 的密钥登陆]()
@@ -185,7 +220,7 @@ exit
 
 
 
-### 参考
+## 参考
 
 - [hexo+阿里云搭建博客网站](https://qianguyihao.com/post/2020-09-19-hexo-aliyun-blog/)
 - [为Github page绑定自定义域名并实现https访问](https://blog.csdn.net/yucicheung/article/details/79560027)
