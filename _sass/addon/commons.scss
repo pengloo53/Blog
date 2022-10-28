@@ -32,7 +32,7 @@ body {
   background: var(--body-bg);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
-  font-family: 'Source Sans Pro', 'Microsoft Yahei', sans-serif;
+  // font-family: 'Source Sans Pro', 'Microsoft Yahei', sans-serif;
   line-height: 1.75;
 }
 
@@ -443,7 +443,7 @@ img[data-src] {
 }
 
 .post-content {
-  font-size: 1.08rem;
+  // font-size: 1.08rem;
   margin-top: 2rem;
   overflow-wrap: break-word;
 
@@ -856,6 +856,7 @@ $sidebar-display: "sidebar-display";
 .profile-wrapper {
   margin-top: 2rem;
   width: 100%;
+  font-family: 'Source Sans Pro', 'Microsoft Yahei', sans-serif;
 }
 
 #search-result-wrapper {
@@ -1507,9 +1508,9 @@ $sidebar-display: "sidebar-display";
     }
   }
 
-  .post-content {
-    font-size: 1.03rem;
-  }
+  // .post-content {
+  //   font-size: 1.03rem;
+  // }
 
   footer {
     div.d-felx {
