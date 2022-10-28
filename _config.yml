@@ -21,7 +21,7 @@ timezone: Asia/Shanghai
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: lupeng · blog                         # the main title
+title: lupeng                     # the main title
 
 tagline: Keep Learning, Keep Share   # it will display as the sub-title
 
@@ -29,7 +29,7 @@ description: >-                        # used by seo meta and the atom feed
   一个非典型产品经理的生活随笔、工作方法、思路分享以及技术笔记。
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ''
+url: 'https://iamlupeng.com'
 
 github:
   username: pengloo53             # change to your github username
@@ -84,6 +84,8 @@ theme_mode:   # [light|dark]
 
 # the avatar on sidebar, support local or CORS resources
 avatar: '/image/logo.png'
+
+favicon_path: '/assets/img/favicons'
 
 # boolean type, the global switch for ToC in posts.
 toc: true
