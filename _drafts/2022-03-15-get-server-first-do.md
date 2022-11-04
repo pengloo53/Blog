@@ -117,3 +117,26 @@ rpm -e xxx  # 卸载
 rpm -e --nodeps xxx  # 强制卸载
 ```
 
+
+
+- [hexo+阿里云搭建博客网站](https://qianguyihao.com/post/2020-09-19-hexo-aliyun-blog/)
+- [为Github page绑定自定义域名并实现https访问](https://blog.csdn.net/yucicheung/article/details/79560027)
+- [为GitHub Pages自定义域名并添加SSL-开启https强制](https://javef.github.io/2018/04/%E4%B8%BAGitHub-Pages%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%B9%B6%E6%B7%BB%E5%8A%A0SSL-%E5%BC%80%E5%90%AFHTTPS%E5%BC%BA%E5%88%B6/#:~:text=%E9%BB%98%E8%AE%A4%E6%83%85%E5%86%B5%E4%B8%8B%E4%BD%BF%E7%94%A8GitHub%20Pages%E7%9A%84%E7%BB%99%E5%AE%9A%E5%9F%9F%E5%90%8D%E5%88%99%E6%94%AF%E6%8C%81http%E5%92%8Chttps%E4%B8%A4%E7%A7%8D%E5%8D%8F%E8%AE%AE%EF%BC%8C%E4%BD%86%E6%98%AF%E5%A6%82%E6%9E%9C%E4%BD%BF%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E7%9A%84%E8%AF%9D%EF%BC%8C%E5%88%99%E5%8F%AA%E8%83%BD%E9%80%9A%E8%BF%87%20http%3A%2F%2F%20%E8%AE%BF%E9%97%AE%EF%BC%8C%E4%B9%9F%E5%B0%B1%E6%98%AF%E8%AF%B4%E6%88%91%E4%BB%AC%E5%9C%A8%20Github%E4%B8%8A%E6%90%AD%E5%BB%BA%20Hexo,%E6%88%96Jekyll%20%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2%20%E5%90%8E%EF%BC%8C%E9%80%9A%E8%BF%87%20CNAME%20%E7%BB%91%E5%AE%9A%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D%E5%90%8E%EF%BC%8C%E6%88%91%E4%BB%AC%E5%8F%AA%E8%83%BD%E9%80%9A%E8%BF%87%20http%3A%2F%2F%20%E5%9F%9F%E5%90%8D%E6%9D%A5%E8%AE%BF%E9%97%AE%E3%80%82)
+- [SSL 证书 一键 HTTPS - 证书安装 - 文档中心 - 腾讯云](https://cloud.tencent.com/document/product/400/58062)
+
+
+
+
+
+
+
+[使用yum命令的时候报，-bash: /usr/bin/yum: /usr/bin/python: bad interpreter: 没有那个文件或目录_anning_88的专栏-CSDN博客](https://blog.csdn.net/anning_88/article/details/75735757)
+
+[CentOS 7 使用 rvm 安装 ruby 搭建 jekyll 环境 - Zhanming's blog](https://qizhanming.com/blog/2017/05/31/install-rvm-and-ruby-buid-jeklly-env-on-centos-7)
+
+
+
+版本依赖关系查看
+
+[jekyll | RubyGems.org | Ruby 社群 Gem 套件管理平台](https://rubygems.org/gems/jekyll/versions/4.2.1)
+
