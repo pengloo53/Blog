@@ -101,12 +101,16 @@ vim post-update
 #! /bin/bash
 unset GIT_DIR
 GIT_CLONE=/root/Git/pengloo53
-PUBLIC_WWW=/home/www/blog
 cd $GIT_CLONE
 git pull
-bundle exec jekyll build -d $PUBLIC_WWW
 exit
 ```
+
+到这里，每次将代码从本地推送到服务端的时候，服务端的 Git 裸库便会触发钩子，自动执行上述脚本，更新 git 工作仓库目录。
+
+然后结合之前 [Docker 那篇文章关于线上部署的介绍](http://localhost:8080/2022/10/12/docker-introduction.html#%E7%BA%BF%E4%B8%8A%E9%83%A8%E7%BD%B2)，便可自动完成 Jekyll 站点的部署。
+
+>  写到这里，我突然发现，整个过程在服务端除了安装 git 和 docker，再无需配置任何环境，使用 Docker 真的太方便了。
 
 
 
@@ -251,4 +255,17 @@ yum 没有配置正确，多半是安装 python 环境导致
 [jekyll | RubyGems.org | Ruby 社群 Gem 套件管理平台](https://rubygems.org/gems/jekyll/versions/4.2.1)
 
 
+
+```
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.10 KiB | 0 bytes/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: hooks/post-update: line 11: cd: /root/Git/pengloo53: Not a directory
+remote: fatal: /usr/libexec/git-core/git-pull cannot be used without a working tree.
+remote: hooks/post-update: line 13: bundle: command not found
+To git@115.159.63.246:blog.git
+   f03969b..80561de  master -> master
+```
 
