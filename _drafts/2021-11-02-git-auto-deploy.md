@@ -17,44 +17,13 @@ tags: [博客,技术]
 
 ## Git 服务器
 
-本质上是要实现类似 GitHub 提供的服务，可以将本地的项目通过 git push 到自己的服务器上，那便需要一个 Git 服务器。
-
-难不成要在自己的服务器上搭建一个开源的 GitHub？理论上是可行的，实际上是没有必要的。毕竟也不需要提供什么 Web 服务，也不用提供给别人使用等等。
-
-一个 Git 裸库，便足以了。
+难不成要在自己的服务器上搭建一个开源的 GitHub？理论上是可行的，实际上是没有必要的。毕竟也不需要提供什么 Web 服务，自己自己使用而已，一个 Git 裸库，便足以了。
 
 ### Git 裸库
 
-服务端的中心仓库，裸仓库一般情况下是作为远端的中心仓库而存在的，它不包含**工作区**，不能在这个目录下执行 Git 命令。其他非裸仓库可以 push 代码到裸仓库，可以从裸仓库 pull 代码到本地。
+Git 裸库便是服务端的中心仓库，裸仓库一般情况下是作为远端的中心仓库而存在的，它不包含**工作区**，不能在这个目录下执行 Git 相关命令。其他非裸仓库可以 push 代码到裸仓库，可以从裸仓库 pull 代码到本地。
 
-**1. 创建裸库**
-
-生成一个裸仓库。
-
-```bash
-cd /home/repo
-git init --bare xxx.git
-```
-
-以上命令会在 `/home/repo` 目录下生成 `xxx.git` 的目录，即为裸仓库。
-
-**2. 切换裸库的分支**
-
-在裸库中执行 `git checkout <branch-name>` 会报错如下：
-
-```bash
-fatal: this operation must be run in a work tree
-```
-
-因为裸库是不存在工作区的，可使用命令 `git symbolic-ref HEAD refs/heads/<branch-name>` 替代。
-
-**3. 与其他远程仓库镜像**
-
-````bash
-git push --mirror http://github.com/pengloo53/xxx
-````
-
-### 服务器配置
+### 服务器操作
 
 这里快速过一下命令了，原理便不多解释。
 
@@ -71,7 +40,7 @@ chown -R git:git /home/git
 
 ### 本地操作
 
-默认已经有了一个本地仓库。
+默认你已经有了一个本地仓库。
 
 ```bash
 # 关联远程仓库，xxx 起个名字，ip_address 服务器 IP 地址
@@ -103,23 +72,40 @@ Git 提供在一些事件的前后事件节点，自动运行脚本的能力，�
 
 ### 自动部署
 
-（1）从本地拉取工作目录
+这里主要是服务端的操作，可分为以下几个步骤：
+
+**（1）初始化工作目录**
+
+Git 裸库只是提供了一个可以接收 push 的远程仓库，它并没有工作目录（不会显示项目代码），所以先初始化一个工作目录，可以从本地仓库直接拉取。
 
 ```bash
-# 直接从本地路径拉取
 git clone /home/git/blog.git
-
-# 如果之前已经使用了 github 拉取，那么，更改项目远程地址为本地
-git remote set-url origin /home/git/blog.git
 ```
 
-（2）编写 `post-update` 钩子
+**（2）编写 `post-update` 钩子**
+
+钩子文件在 `/home/git/blog.git/hooks/post-update`，这个目录下有一些钩子的示例代码，可以复制一份开始编辑。
+
+```bash
+# 进入目录
+cd /home/git/blog.git/hooks
+# 复制示例代码
+cp post-update.sample post-update
+# 开始编辑钩子代码
+vim post-update
+```
+
+写入代码如下：
 
 ```shell
-#! 
-GIT_REPO=/home/repo/xxx.git
-TMP_GIT_CLONE=/home/git/tmp/blog-site
-PUBLIC_WWW=/home/www/xxx
+#! /bin/bash
+unset GIT_DIR
+GIT_CLONE=/root/Git/pengloo53
+PUBLIC_WWW=/home/www/blog
+cd $GIT_CLONE
+git pull
+bundle exec jekyll build -d $PUBLIC_WWW
+exit
 ```
 
 
@@ -141,7 +127,7 @@ git --work-tree=${DIR} checkout --force
 ```
 
 ```bash
-#!/bin/sh
+#! /bin/sh
 unset GIT_DIR  #很关键
 NowPath=`pwd`
 DeployPath="/usr/local/nginx/html/student" #存放项目的文件夹位置
@@ -152,22 +138,6 @@ composer install --ignore-platform-reqs
 cd $NowPath
 echo "同步完成"
 exit 0
-```
-
-#### 部署 Jekyll 服务
-
-```bash
-#! /bin/bash
-unset GIT_DIR
-GIT_REPO=/home/repo/xxx.git
-TMP_GIT_CLONE=/home/git/tmp/blog-site
-PUBLIC_WWW=/home/www/xxx
-git clone $GIT_REPO $TMP_GIT_CLONE
-cd $TMP_GIT_CLONE
-bundle install
-bundle exec jekyll build -s $TMP_GIT_CLONE -d $PUBLIC_WWW -q
-rm -rf $TMP_GIT_CLONE
-exit
 ```
 
 
@@ -207,7 +177,34 @@ git push origin :branch_name
 
 
 
+**1. 创建裸库**
 
+生成一个裸仓库。
+
+```bash
+cd /home/git
+git init --bare blog.git
+```
+
+以上命令会在 `/home/git` 目录下生成 `blog.git` 的目录，即为裸仓库。
+
+**2. 切换裸库的分支**
+
+在裸库中执行 `git checkout <branch-name>` 会报错如下：
+
+```bash
+fatal: this operation must be run in a work tree
+```
+
+因为裸库是不存在工作区的，可使用命令 `git symbolic-ref HEAD refs/heads/<branch-name>` 替代。
+
+**3. 与其他远程仓库镜像**
+
+````bash
+git push --mirror http://github.com/pengloo53/xxx
+````
+
+###
 
 
 
@@ -233,7 +230,7 @@ git push origin :branch_name
 
 
 
-
+[部署方法 - Jekyll • 简单静态博客网站生成器](http://jekyllcn.com/docs/deployment-methods/)
 
 > zsh: /usr/bin/yum: bad interpreter: /usr/bin/python: 没有那个文件或目录
 
