@@ -8,21 +8,37 @@ tags: [tool,git]
 
 ### 1. git config 配置
 
-刚开始使用Git的时候，很多人肯定都忽略配置的相关内容。也许你还记的在第一次`push`内容的时候，总会有提示让你设置你的用户名以及邮箱。其实这就是最基本的一个配置。
+刚开始使用 Git 的时候，很多人肯定都忽略配置的相关内容。也许你还记的在第一次`push`内容的时候，总会有提示让你设置你的用户名以及邮箱。其实这就是最基本的一个配置。
 
-`git config --list`可以查看目前git仓库中有哪些配置。那么另外一个问题来了，Linux中有个观点是：『一切皆文件』，这些配置从哪里来的？共有3个地方设置，分别是系统级的、用户级的以及仓库级的。
+`git config --list`可以查看目前 git 仓库中有哪些配置。那么另外一个问题来了，Linux 中有个观点是：『一切皆文件』，这些配置从哪里来的？共有3个地方设置，分别是系统级的、用户级的以及仓库级的。
 
-1. `/etc/gitconfig` 系统级的配置，系统中所有的`git`仓库都普遍适用的配置。使用`git config --system`来写入；如：  
-`git config --system user.name pengloo53`
+**（1）/etc/gitconfig 系统级的配置**
 
-	> 注意：配置文件不一定是`/etc/gitconfig`，去你的git安装的目录下去找。怎么找？Linux和Mac用户可以使用`which git`找到`git`的所在地，然后就好找了，比如我的`git`的系统配置文件在`/usr/local/etc/gitconfig`下。我的Mac是通过`homebrew`安装的`git`。如果是Windows系统，去安装目录下找就OK了。
+系统中所有的`git`仓库都普遍适用的配置。
 
-2. `~/.gitconifg`用户级的配置，该用户下所有的`git`仓库都普遍适用的配置。使用`git config --globe`来写入；如：  
-`git config --globe user.email aa@xxx.com`
+```bash
+git config --system user.name pengloo53
+```
 
-3. `.git/config`仓库级的配置，只针对某个仓库而言的配置。在仓库目录下直接`git config`来写入配置。
+> 注意：配置文件不一定是`/etc/gitconfig`，去你的 git 安装的目录下去找。怎么找？Linux和 Mac 用户可以使用`which git`找到`git`的所在地，然后就好找了，比如我的 `git` 的系统配置文件在 `/usr/local/etc/gitconfig` 下。我的Mac是通过`homebrew`安装的 `git`。如果是 Windows 系统，去安装目录下找就 OK 了。
 
-如果我很无聊，分别使用`git config --system user.name name_1`、`git config --globe user.name name_2`以及`git config user.name name_3`设置了我的用户名，那么推送消息的时候到底记录的是哪个呢？这里不用担心，`git`会一级一级覆盖的，也就是会显示最小范围的那个级别。如果有相同的配置存在，最终会显示仓库级的那个配置。
+**（2）~/.gitconfig 用户级的配置**
+
+该用户下所有的`git`仓库都普遍适用的配置。使用`git config --globe`来写入。
+
+**（3）.git/config 仓库级的配置**
+
+只针对某个仓库而言的配置。在仓库目录下直接`git config`来写入配置。
+
+如果我很无聊，分别使用下面三种方式设置了我的用户名，那么，推送消息的时候到底记录的是哪个呢？
+
+```bash
+git config --system user.name name_1
+git config --globe user.name name_2
+git config user.name name_3
+```
+
+这里不用担心，`git`会一级一级覆盖的，也就是会显示最小范围的那个级别。如果有相同的配置存在，最终会显示仓库级的那个配置。
 
 ### 2. git commit 提交
 
@@ -34,7 +50,7 @@ tags: [tool,git]
 
 再如果`commit`之前忘了`add`某些文件了，想一块`commit`进来，没关系。
 
-```
+```bash
 git add --all
 git commit --amend 
 ```
@@ -53,7 +69,7 @@ git commit --amend
 
 在之前，这个命令我基本上没有怎么使用过，因为创建的仓库，除了第一次使用关联到`github`上之后，就再也没咋用了。把本地的仓库上传至远程，基本上会用到如下两条命令。
 
-```
+```bash
 git remote add origin https://github.com/XXX/xxx.git
 git push -u origin
 ```
@@ -66,7 +82,7 @@ git push -u origin
 
 你在`github`上`fork`了一个别人的项目，并且`clone`下到本地，而且玩了老长时间了，也许你还`pull request`一下别人的项目，运气好，别人还`merge`了你的`pull request`，然后过了好长时间，你都放弃了这个项目，然而别人还在一直更新，你想看看最新的项目状态。那么你可以通过下面几条命令，再把别人仓库的内容抓取下来。
 
-```
+```bash
 git reomte add others https://github.com/xxx/xxx.git
 git fetch others master
 git checkout -b tmp others/master
@@ -87,6 +103,10 @@ git checkout -b tmp others/master
 - Windows上就不用安装了，安装完[git for windows](http://git-scm.com/download/win)就可以直接使用了。
 - Mac上如果无法使用`gitk`命令启动图形界面，赶紧[点击这里安装](http://stackoverflow.com/questions/17582685/install-gitk-on-ma)，不要再犹豫。
 - Linux，啊，能把Linux当桌面系统使用的用户都是高手，我这里就不班门弄斧了。
+
+---
+
+2022.11 更新
 
 ### 6. git 分支
 
@@ -119,5 +139,19 @@ git branch -m <new-branch-name> 将当前分支重命名
 ```bash
 git push origin --delete branch_name
 git push origin :branch_name
+```
+
+### 7. git 裸库
+
+```bash
+# 生成一个裸仓库
+git init --bare blog.git
+
+# 切换分支，执行 git checkout <branch-name> 会报错：fatal: this operation must be run in a work tree
+# 使用下面命令切换分支
+git symbolic-ref HEAD refs/heads/<branch-name>
+
+# 与其他远程仓库镜像
+git push --mirror http://github.com/pengloo53/xxx
 ```
 
