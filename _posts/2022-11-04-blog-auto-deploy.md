@@ -107,7 +107,7 @@ vim post-update
 ```shell
 #! /bin/bash
 unset GIT_DIR
-GIT_CLONE=/root/Git/pengloo53
+GIT_CLONE=/home/Git/pengloo53
 cd $GIT_CLONE
 git pull
 exit

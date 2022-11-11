@@ -8,9 +8,7 @@ tags: [Linux,运维]
 
 #### 生成公钥
 
-在本地终端，输入 `ssh-keygen` 命令后，一路回车就可以了。
-
-Windows 电脑建议提前安装 [Git 客户端](https://gitforwindows.org/)，千万别用 cmd 来操作。
+在本地终端，输入 `ssh-keygen` 命令后，一路回车就可以了，Windows 电脑建议提前安装 [Git 客户端](https://gitforwindows.org/)。
 
 ![](2022-03-15-get-server-first-do/image-20211102174256261.png)
 
