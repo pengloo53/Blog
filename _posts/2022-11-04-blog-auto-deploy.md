@@ -43,7 +43,7 @@ chown -R git:git /home/git
 两点建议：
 
 1. 建议创建单独的 git 用户来操作，repo 的用户权限改为 git
-2. 本地仓库想要顺利（无需输入密码）push 到服务端的 git 仓库，建议[配置 ssh 的密钥登陆]()
+2. 本地仓库想要顺利（无需输入密码）push 到服务端的 git 仓库，建议配置[SSH 密钥登录 - SSH 教程 - 网道](https://wangdoc.com/ssh/key)
 
 ### 本地操作
 
