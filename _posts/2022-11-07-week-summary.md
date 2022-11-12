@@ -1,7 +1,7 @@
 ---
 title: 写总结，刺激自己推进 side project
 date: 2022-11-07
-tags: [周总结,planB]
+tags: [周总结,side project]
 ---
 
 以后周总结分为两个部分来写：一是，本周的主要事项（我认为重要的）；二是，side project 的进展（挑重点的说）。
