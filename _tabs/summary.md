@@ -134,3 +134,5 @@ order: 3
 ### Vol. 202211
 
 - [写总结，刺激自己推进 side project](/2022/11/07/week-summary.html)
+- [明显感觉时间越来越不够用](/2022/11/12/week-summary.html)
+- [重构 Kindle2flomo](/2022/11/20/week-summary.html)
