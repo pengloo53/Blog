@@ -1,5 +1,5 @@
 ---
-title: 10 月份总结：项目启动
+title: 10 月份总结：项目启动 ｜ 周总结
 date: 2022-11-01
 tags: [周总结,side project]
 ---

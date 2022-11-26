@@ -1,5 +1,5 @@
 ---
-title: 写总结，刺激自己推进 side project
+title: 刺激自己推进 side project ｜ 周总结
 date: 2022-11-07
 tags: [周总结,side project]
 ---

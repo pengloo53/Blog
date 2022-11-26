@@ -1,5 +1,5 @@
 ---
-title: 博客自动化部署
+title: 博客自动化部署 ｜ 周总结
 date: 2022-11-04
 tags: [blog,git]
 ---
