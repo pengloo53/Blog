@@ -49,4 +49,4 @@ tags: [周总结,side project]
 
 ---
 
-相关阅读：[重新捡起我的 side project](http://localhost:8080/2022/10/29/side-project.html)
+相关阅读：[重新捡起我的 side project](/2022/10/29/side-project.html)

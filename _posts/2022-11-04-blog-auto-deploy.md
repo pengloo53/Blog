@@ -115,7 +115,7 @@ exit
 
 到这里，每次将代码从本地推送到服务端的时候，服务端的 Git 裸库便会触发钩子，自动执行上述脚本，更新 git 工作仓库目录。
 
-然后结合之前 [Docker 那篇文章关于线上部署的介绍](http://localhost:8080/2022/10/12/docker-introduction.html#%E7%BA%BF%E4%B8%8A%E9%83%A8%E7%BD%B2)，便可自动完成 Jekyll 站点的部署。
+然后结合之前 [Docker 那篇文章关于线上部署的介绍](/2022/10/12/docker-introduction.html#%E7%BA%BF%E4%B8%8A%E9%83%A8%E7%BD%B2)，便可自动完成 Jekyll 站点的部署。
 
 >  写到这里，我突然发现，整个过程在服务端除了安装 git 和 docker，再无需配置任何环境，使用 Docker 真的太方便了。
 

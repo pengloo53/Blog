@@ -1,7 +1,7 @@
 ---
 title: Vue 学习告一段落 & Kindle2flomo 部署一些事
 date: 2022-11-27
-tags: [side project,kindle2flomo]
+tags: [side project,kindle2flomo,cdn]
 ---
 
 Vue 学习先告一段落，以选 UI 框架为始，以重构 Kindle2flomo 为终，初步具备写个前端小项目的水平，后面的学习，将会是查漏补缺，而不再是系统性的学习了。
