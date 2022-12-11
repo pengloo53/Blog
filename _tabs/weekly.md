@@ -49,3 +49,4 @@ order: 4
 ### Vol. 202212
 
 - [居家办公，稀碎的时间](/2022/12/04/week-summary.html)
+- [明年的工作算是保住了](/2022/12/11/week-summary.html)

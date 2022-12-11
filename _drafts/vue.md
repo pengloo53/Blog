@@ -130,7 +130,7 @@ multipart/form-data: 文件上传的时候需要设置
 text/xml: 很少用了
 ```
 
-post 请求上传，`FormData` 对象会自动添加 `Content-Type` 为 `multipart/form-data`，且添加分隔符 `boundary=xxx`，不要手动设置，否则出现问题
+post 请求上传，`FormData` 对象会自动添加 `Content-Type` 为 `multipart/form-data`，且添加分隔符 `boundary=xxx` （用来分割消息主体的），不要手动设置，否则服务端将会无法拿到传过来的参数。
 
 ```javascript
 fetch(url, {
