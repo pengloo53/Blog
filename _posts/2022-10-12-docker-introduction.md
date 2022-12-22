@@ -2,7 +2,7 @@
 title: Docker Introduction
 date: 2022-10-12
 tags: [docker,jekyll,nginx]
-pin: true
+pin: false
 ---
 
 2022 年了，才开始去学习 Docker，也是没谁了。当然，也不是闲着没事，学习的目的是为了解决在 Windows 上搭建 Jekyll 服务的问题，便于在上班时间摸鱼发文章，嗯，最初的动机就是这么的单纯。

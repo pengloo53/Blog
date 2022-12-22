@@ -1,7 +1,7 @@
 ---
 title: 近期又折腾了下博客
 date: 2021-10-27
-tags: [blog,jekyll,hexo]
+tags: [博客,jekyll,hexo]
 key: about-blog 
 ---
 
