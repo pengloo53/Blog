@@ -51,3 +51,4 @@ order: 4
 - [居家办公，稀碎的时间](/2022/12/04/week-summary.html)
 - [明年的工作算是保住了](/2022/12/11/week-summary.html)
 - [相互画饼 & chatGPT 帮我写代码](/2022/12/18/week-summary.html)
+- [尽快摆脱玩家心态](/2022/12/25/week-summary.html)
