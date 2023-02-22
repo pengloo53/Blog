@@ -84,7 +84,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub root@xxx.xxx.xxx.xxx
 
 编辑 `/etc/sudoers`，将命令的路径添加到安全路径中。
 
-![](./../image/2022-03-15-get-server-first-do/image-20221019162132166.png)
+![](./..../image/2022-03-15-get-server-first-do/image-20221019162132166.png)
 
 ### 检查端口
 

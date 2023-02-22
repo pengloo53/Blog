@@ -41,7 +41,7 @@ order: 3
 
 ### 字节工厂
 
-![](/image/product/bytefactory.jpg)
+![](../image/product/bytefactory.jpg)
 
 这是一个微信小程序，搜索【字节加工厂】，便可找到。
 
@@ -55,7 +55,7 @@ order: 3
 
 访问地址：[http://kindle2flomo.90byte.com/index.html](http://kindle2flomo.90byte.com/index.html)
 
-![](/image/product/kindle2flomo.png)
+![](../image/product/kindle2flomo.png)
 
 这是一个将 Kindle 读书笔记一键导入到 [flomo](https://flomoapp.com/) 中的小工具。下面是做这个小工具的一些记录：
 
@@ -74,7 +74,7 @@ order: 3
 > 已经停止服务，推荐使用：[Markdown Nice](https://editor.mdnice.com/)。
 {: .prompt-warning}
 
-![](/image/product/md2wechat.png)
+![](../image/product/md2wechat.png)
 
 这是一款针对微信公众号发文的 Markdown 在线编辑器。
 
