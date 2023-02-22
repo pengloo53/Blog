@@ -6,9 +6,9 @@
 ## 小程序入门
 - [00 微信小程序，入门移动端产品的最佳实践 ](2019/2019-08-04-first.md)
 - [01 了解小程序的页面逻辑](2019/miniprogram_introduction/01_know_page.md)
-- [02 Hello, World | 写一个完整的页面](2019/miniprogram_introduction/02_first_page.md)
-- [03 实现页面交互 | 地图 API 的使用](2019/miniprogram_introduction/03_map_api_use.md)
-- [04 数据持久化保存 | Storage API 的使用](2019/miniprogram_introduction/04_storage_use.md)
+- [02 从 Hello, World 开始写一个完整的页面](2019/miniprogram_introduction/02_first_page.md)
+- [03 实现页面交互，地图 API 的使用](2019/miniprogram_introduction/03_map_api_use.md)
+- [04 数据持久化保存，Storage API 的使用](2019/miniprogram_introduction/04_storage_use.md)
 - [05 初次使用 Canvas 画布](2019/miniprogram_introduction/05_canvas_first_use.md)
 - [06 页面数据（参数）传输的方式](2019/miniprogram_introduction/06_send_param_in_pages.md)
 - [07 如何使用第三方 npm 扩展包](2019/miniprogram_introduction/07_use_npm_package.md)
