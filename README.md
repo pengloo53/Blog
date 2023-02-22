@@ -1,3 +1,5 @@
+# 博客文章
+
 在[正式放弃个人博客](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198901&idx=1&sn=a0c470aed46e674a9e7f564ebdf36e36&chksm=be572bbc8920a2aad96663dd1200d84ee12cd49b2f3f6df031d8b85d4c7c34ff7ad814ca7d9c#rd)之后，便将所有的文章迁移到了这里，这个 repo 也会作为我博客的一个备份。
 
 所有文章都可以无障碍访问，摘要如下：
@@ -20,7 +22,7 @@
 - 如何写需求规划报告
 - ......
 
-订阅地址：https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MjM5MDQ4NjUwMg==&action=getalbum&album_id=2027947903146590214#wechat_redirect
+订阅地址：[微信公众号](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MjM5MDQ4NjUwMg==&action=getalbum&album_id=2027947903146590214#wechat_redirect)
 
 ### toG 故事
 
@@ -34,7 +36,7 @@
 - 如何做到裁员不慌
 - ......
 
-订阅地址：https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MjM5MDQ4NjUwMg==&action=getalbum&album_id=1583605393820286976#wechat_redirect
+订阅地址：[微信公众号](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MjM5MDQ4NjUwMg==&action=getalbum&album_id=2027947903146590214#wechat_redirect)
 
 ## 产品实践
 
@@ -59,7 +61,7 @@
 这是一个将 Kindle 读书笔记一键导入到 [flomo](https://flomoapp.com/) 中的小工具。下面是做这个小工具的一些记录：
 
 - [详谈 Kindle 读书笔记的导出](http://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198191&idx=1&sn=95c506dde4a079d2840a91b12ca358a8&chksm=be5734e68920bdf04af5ad5f31d8c40acea17e723b1b0eeaa2d3d47d009a0adc5abca44bc953#rd)
-- [Kindle 笔记一键导入 Flomo](http://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198220&idx=1&sn=5d0fecf4d3a4ab1469724292dad9797d&chksm=be5734058920bd13ac17f149d7a54dd01b17a066d70f55a813ebb338075b6837f6c6605b255b#rd)
+- [Kindle 笔记一键导入 flomo](http://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198220&idx=1&sn=5d0fecf4d3a4ab1469724292dad9797d&chksm=be5734058920bd13ac17f149d7a54dd01b17a066d70f55a813ebb338075b6837f6c6605b255b#rd)
 - [聊一点 kindle2flomo 技术相关的东西吧](http://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198238&idx=1&sn=31d5111d4a3bdc65ab1283612f1427f1&chksm=be5734178920bd0117a068f2c73897fd05c37bddba78efd62ccdf2bb6df5a0386172a4499143#rd)
 - [kindle2flomo 2.0 帮助你提高写读书笔记的效率](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198375&idx=1&sn=7e50878c8e7046293a84b64bdec89918&chksm=be5735ae8920bcb87a66306af0038d29d265750d13136ce067887e129edf9c95051d509cc4d5&token=1584174037&lang=zh_CN#rd)
 - [kindle2flomo 更新一二事，适配移动端](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198414&idx=1&sn=33fd4821387b8ad50190cef56de5d38d&chksm=be5735c78920bcd13e4f18262d5f0853b979ba4744f4ffed565b366ca4ebf28042ef88d280e6&token=1584174037&lang=zh_CN#rd)
@@ -84,6 +86,7 @@
 
 - [微信公众号 Markdown 编辑器，可能是最接近原生的体验](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198509&idx=1&sn=dc73a7bce4836d6648d7a4f8c8f0ff49&chksm=be5735248920bc322774cd6bce06bcc8553aa67c0b4745a40170762eed3704e0e1603f61bb14&token=1584174037&lang=zh_CN#rd)
 
+
 ### 技术笔记
 
 最初决定离开职场，原本是打算开始写教程的，结果还是草率了。这个领域需要付出的努力，远非我所能想象。
@@ -92,60 +95,6 @@
 
 是时候祭出这篇文章了：[一坑未平，多坑再起](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649197822&idx=1&sn=df72505e9da6dcb09a3f3e70ede9c0c5&chksm=be5736778920bf615e09f9260e42620980b10bedca2e24adf50d8d7cfb1cb3467a02e59c4491#rd)。
 
-## 周总结
+---
 
-2022 年四月初的时候，给自己定下了一个任务，去尝试整理平时零零散散写下的那些的文字，逐渐体系化。
-
-> 公众号：九零字节，[20220403](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198650&idx=1&sn=055826498a76d853d860a2fb9be181e4&chksm=be572ab38920a3a562f93fa3c6c7b555f7275cf63923ec2af1ad22673f435165ab8c3f418ba0&token=1477101111&lang=zh_CN#rd)
-
-要形成体系，可不容易，需要在某个领域的长期坚持。难，不要紧，好在我已经在做了。
-
-每周总结自己的日志（流水账，不公开），从中找一些有价值的信息，便形成了周总结。这些内容对他人可能没有多大价值，但对我至关重要。
-
-更新周期：每周 or 每双周
-
-### Vol.202204
-
-- [人到中年，身体扛不住了](2022/2022-04-03-week-summary.md)
-- [清明假期后的职场危机](2022/2022-04-11-week-summary.md)
-- [在 toG 做产品](2022/2022-04-18-week-summary.md)
-- [躺平也挺好](2022/2022-04-25-week-summary.md)
-
-### Vol.202205
-
-- [一些本能驱动的工作](2022/2022-05-08-week-summary.md)
-- [疫情缘故居家办公了](2022/2022-05-16-week-summary.md)
-- [关在家里已经三周了](2022/2022-05-29-week-summary.md)
-
-### Vol.202206
-
-- [儿童节这天解封了](2022/2022-06-05-week-summary.md)
-- [恢复正常工作的 6 月](2022/2022-06-26-week-summary.md)
-
-### Vol.202207
-
-- [略显悲观的产品工作](2022/2022-07-03-week-summary.md)
-- [一个人的孤独](2022/2022-07-13-week-summary.md)
-- [独处的生活](2022/2022-07-31-week-summary.md)
-
-### Vol.202208
-
-- [生活流水帐](2022/2022-08-14-week-summary.md)
-
-### Vol.202210
-
-- [10 月份总结：项目启动](2022/2022-11-01-summary-about-october.md)
-
-### Vol. 202211
-
-- [写总结，刺激自己推进 side project](2022/2022-11-07-week-summary.md)
-- [明显感觉时间越来越不够用](2022/2022-11-12-week-summary.md)
-- [重构 Kindle2flomo](2022/2022-11-20-week-summary.md)
-- [打工人封控在家](2022/2022-11-26-week-summary.md)
-
-### Vol. 202212
-
-- [居家办公，稀碎的时间](2022/2022-12-04-week-summary.md)
-- [明年的工作算是保住了](2022/2022-12-11-week-summary.md)
-- [相互画饼 & chatGPT 帮我写代码](2022/2022-12-18-week-summary.md)
-- [尽快摆脱玩家心态](2022/2022-12-25-week-summary.md)
+- [关于作者](about.md)
