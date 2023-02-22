@@ -34,7 +34,7 @@
 - 如何做到裁员不慌
 - ......
 
-订阅地址：[微信公众号](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MjM5MDQ4NjUwMg==&action=getalbum&album_id=2027947903146590214#wechat_redirect)
+订阅地址：[微信公众号](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MjM5MDQ4NjUwMg==&action=getalbum&album_id=1583605393820286976#wechat_redirect)
 
 ## 产品实践
 
