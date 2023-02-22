@@ -1,8 +1,6 @@
-# 博客文章
+# 我的博客
 
-在[正式放弃个人博客](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198901&idx=1&sn=a0c470aed46e674a9e7f564ebdf36e36&chksm=be572bbc8920a2aad96663dd1200d84ee12cd49b2f3f6df031d8b85d4c7c34ff7ad814ca7d9c#rd)之后，便将所有的文章迁移到了这里，这个 repo 也会作为我博客的一个备份。
-
-所有文章都可以无障碍访问，摘要如下：
+在[正式放弃个人博客](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198901&idx=1&sn=a0c470aed46e674a9e7f564ebdf36e36&chksm=be572bbc8920a2aad96663dd1200d84ee12cd49b2f3f6df031d8b85d4c7c34ff7ad814ca7d9c#rd)之后，便将所有的文章迁移到了这里，正式开启我的博客 2.0 时代，所有文章都可以无限制访问，大概总结如下：
 
 ## 工作总结
 
@@ -97,4 +95,4 @@
 
 ---
 
-- [关于作者](about.md)
+[关于作者](about.md)
