@@ -1,6 +1,5 @@
 ---
 title: 选择比努力重要吗？
-categories: summary
 tags: 选择
 ---
 
@@ -28,6 +27,7 @@ tags: 选择
 
 选择看上去比努力重要，只是徒有其表，更关键的还是要关注个人的成长，这样才不会有「什么道理都懂，却依然过不好这一生」的感慨。
 
+---
 
-> 取自：[从被优化掉的独立咨询顾问，聊到「自由」职业，聊到人生「选择」 - lupeng · blog](/2022/03/02/free-and-choice.html)
+摘自：[从被优化掉的独立咨询顾问，聊到「自由」职业，聊到人生「选择」](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198639&idx=1&sn=9dfd27a974abc241625ffddbd90ea582&chksm=be572aa68920a3b02ca960a4c53482563d2e5ed6276672cee56ff75cff2ac8f4e95c070d21ac&token=2072472020&lang=zh_CN#rd)
 

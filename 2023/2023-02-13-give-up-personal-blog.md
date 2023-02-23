@@ -8,10 +8,10 @@ tags: [博客,知识付费]
 
 个人博客这个事情，我没少花时间折腾，其中的过程看这几篇文章便可知晓。
 
-- [博客时代虽已没落，但内容创作永远不会过时](https://mp.weixin.qq.com/s?**biz=MjM5MDQ4NjUwMg==&mid=2649196882&idx=1&sn=13943007798535a0b9e54fc1a35ef3a3&chksm=be5733db8920bacdf9878f2810e995fb9afb013974457cfe3980548b8c167c3559ec4eee618e&token=1184766650&lang=zh***CN#rd)
-- [我和个人博客那点事儿](https://mp.weixin.qq.com/s?**biz=MjM5MDQ4NjUwMg==&mid=2649198578&idx=1&sn=b4810187f430e2b8cc3f000984dfd07f&chksm=be57357b8920bc6d52c561845afc7b37df37406fe05cb3eeabef2015d6d20bd76166ad9b690e&token=1184766650&lang=zh***CN#rd)
-- [再折腾博客](https://mp.weixin.qq.com/s?**biz=MjM5MDQ4NjUwMg==&mid=2649198815&idx=1&sn=0870eec03a4a3ca390ac96634a87ca18&chksm=be572a568920a340de330070cb2465c14d2d0480b51d8e38b704f8bd70bb7306dd6bfcd1b772&token=1184766650&lang=zh***CN#rd)
-- [博客自动化部署](https://mp.weixin.qq.com/s?**biz=MjM5MDQ4NjUwMg==&mid=2649198846&idx=1&sn=7c8f0bb6efc0ea791c8fe0e677290867&chksm=be572a778920a3619e0ce85117e91de7a6e1a96f8dce74121bcf2da470a0f6f02e674e3753dc&token=1184766650&lang=zh***CN#rd)
+- [博客时代虽已没落，但内容创作永远不会过时](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649196882&idx=1&sn=13943007798535a0b9e54fc1a35ef3a3&chksm=be5733db8920bacdf9878f2810e995fb9afb013974457cfe3980548b8c167c3559ec4eee618e&token=1184766650&lang=zh_CN#rd)
+- [我和个人博客那点事儿](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198578&idx=1&sn=b4810187f430e2b8cc3f000984dfd07f&chksm=be57357b8920bc6d52c561845afc7b37df37406fe05cb3eeabef2015d6d20bd76166ad9b690e&token=1184766650&lang=zh_CN#rd)
+- [再折腾博客](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198815&idx=1&sn=0870eec03a4a3ca390ac96634a87ca18&chksm=be572a568920a340de330070cb2465c14d2d0480b51d8e38b704f8bd70bb7306dd6bfcd1b772&token=1184766650&lang=zh_CN#rd)
+- [博客自动化部署](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198846&idx=1&sn=7c8f0bb6efc0ea791c8fe0e677290867&chksm=be572a778920a3619e0ce85117e91de7a6e1a96f8dce74121bcf2da470a0f6f02e674e3753dc&token=1184766650&lang=zh_CN#rd)
 
 每一次折腾博客，与我而言，都是有益处的。例如：折腾 Hexo 期间，还帮助当时部门搭建起一个小的知识库系统，后来凭借这个小玩意，还为公司拿下一个专利。
 
