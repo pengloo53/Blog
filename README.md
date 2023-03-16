@@ -36,6 +36,10 @@
 
 订阅地址：[微信公众号](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MjM5MDQ4NjUwMg==&action=getalbum&album_id=1583605393820286976#wechat_redirect)
 
+### 每周总结
+
+直接点这里：[周总结](weekly.md)
+
 ## 产品实践
 
 这里记录我做过的一些小玩意。
