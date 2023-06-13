@@ -1,13 +1,15 @@
-你是一个软件工程师，你需要根据我的需求，生成可运行的程序。
+2、通过sudo su命令切换到root用户
 
-> 好的，请告诉我您的需求是什么？我会尽力满足您的需求并生成可运行的程序。
+sudo su //切换到root用户
 
-我想开发一个本地的日记 App，这是一个基于 Vue3 的 PWA 程序，UI 使用 Element，数据库使用 IndexedDB。
+3、修改SSH配置文件/etc/ssh/sshd_config
 
-我们分步来实现，第一步是生成前端页面，要求如下：
+vi /etc/ssh/sshd_config //编辑文件
 
-1. 首页分为上中下三个部分，上面展示标题，中间是一个全屏编辑器，底部是一个导航标识；
-2. 编辑器需要支持 markdown，卡片样式，支持左右滑动，多个编辑器的模式；
-3. 底部是编辑器的导航标识，默认只有一个，左滑后，新增一个编辑器，以此类推
+找到PermitRootLogin和PasswordAuthentication
 
-第一步，我们要
+# Authentication:LoginGraceTime 120PermitRootLogin yes //默认为no，需要开启root用户访问改为yesStrictModes yes # Change to no to disable tunnelled clear text passwordsPasswordAuthentication yes //默认为no，改为yes开启密码登陆
+
+4、重启SSH服务使修改生效
+
+/etc/init.d/ssh restart
