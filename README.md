@@ -1,6 +1,6 @@
-# 我的博客
+#  by lupeng
 
-在[正式放弃个人博客](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198901&idx=1&sn=a0c470aed46e674a9e7f564ebdf36e36&chksm=be572bbc8920a2aad96663dd1200d84ee12cd49b2f3f6df031d8b85d4c7c34ff7ad814ca7d9c#rd)之后，便将所有的文章迁移到了这里，正式开启我的博客 2.0 时代，所有文章都可以无限制访问，大概总结如下：
+在[正式放弃个人博客](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198901&idx=1&sn=a0c470aed46e674a9e7f564ebdf36e36&chksm=be572bbc8920a2aad96663dd1200d84ee12cd49b2f3f6df031d8b85d4c7c34ff7ad814ca7d9c#rd)之后，便将所有的文章迁移到了这里，正式开启我的博客 2.0 时代，所有文章都可以无限制访问，都在 GitHub 仓库中。
 
 ## 工作总结
 
@@ -36,23 +36,25 @@
 
 订阅地址：[微信公众号](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MjM5MDQ4NjUwMg==&action=getalbum&album_id=1583605393820286976#wechat_redirect)
 
-### 每周总结
+## 每周总结
 
 直接点这里：[周总结](weekly.md)
 
 ## 产品实践
 
-这里记录我做过的一些小玩意。
+这里记录我做过的一些小玩意，大多已经停止服务，有点丧。
 
 ### 字节工厂
 
+> 已经停止服务，2019 年 Gap 那几个月做的，没能扛住压力坚持下去。
+
 ![](./image/product/bytefactory.jpg)
 
-这是一个微信小程序，搜索【字节加工厂】，便可找到。
+这是一个微信小程序，名为【字节加工厂】，它是一个小工具合集，2019 年在家待业那几个月看了几本小程序开发的书籍，一边学习，一边做了这个小程序。
 
-它是一个小工具合集，2019 年在家待业那几个月鼓捣的，看了几本小程序开发的书籍，学习过程中，并尝试做了这个小程序，自我感觉还不错，从想法、到设计、到研发、到上线，过程还是挺享受的。只是现实是残酷了，所有时间铺在这么个毫无收益的事情上面，注定是无法持久的。
+从想法、到设计、到研发、到上线，过程还是挺享受的。然而现实是残酷了，大部分时间铺在这么个毫无收益的事情上面，注定是无法持久的。
 
-一边学习，一边写代码，一边总结，那几个月的时光至少还是很充实的。最后输出了一个[入门教程](tech.md)，作为它最后的收场。
+最后输出了一个[入门教程](tech.md)，作为它最后的收场。
 
 ### Kindle2flomo
 
@@ -67,10 +69,9 @@
 - [聊一点 kindle2flomo 技术相关的东西吧](http://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198238&idx=1&sn=31d5111d4a3bdc65ab1283612f1427f1&chksm=be5734178920bd0117a068f2c73897fd05c37bddba78efd62ccdf2bb6df5a0386172a4499143#rd)
 - [kindle2flomo 2.0 帮助你提高写读书笔记的效率](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198375&idx=1&sn=7e50878c8e7046293a84b64bdec89918&chksm=be5735ae8920bcb87a66306af0038d29d265750d13136ce067887e129edf9c95051d509cc4d5&token=1584174037&lang=zh_CN#rd)
 - [kindle2flomo 更新一二事，适配移动端](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198414&idx=1&sn=33fd4821387b8ad50190cef56de5d38d&chksm=be5735c78920bcd13e4f18262d5f0853b979ba4744f4ffed565b366ca4ebf28042ef88d280e6&token=1584174037&lang=zh_CN#rd)
+- [Kindle2flomo 最终版发布](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198863&idx=1&sn=17b5b27f4ad52ca2841b17692d7073b9&chksm=be572b868920a290cf13cbd69cf77ad955a96042a8a5d6fb9a5f0e89b1fafec423ff311e3b16#rd)
 
-随着 Kindle 中国的关闭，这个工具大概率不会更新了。但可能会出现新的工具：基于它的读书笔记产品。
-
-重学 Vue 的契机，重构了该项目，看这篇文章：[Kindle2flomo 最终版发布](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198863&idx=1&sn=17b5b27f4ad52ca2841b17692d7073b9&chksm=be572b868920a290cf13cbd69cf77ad955a96042a8a5d6fb9a5f0e89b1fafec423ff311e3b16#rd)。
+自己偶尔也会用一下，但使用频次几乎可以忽略不计了。所以，这个工具大概率也不会更新了。
 
 ### MD2Wechat
 
